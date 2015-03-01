@@ -21,10 +21,16 @@ angular.module('haoyiminApp')
       $scope.total="{color:red}";
       var age = $scope.age;
       var agePoints = 0;
-      if (age >= 25 && age <= 32){
+      if(age >= 18 && age <= 24) {
+        agePoints = 25;
+      } else if (age >= 25 && age <= 32){
         agePoints = 30;
       } else if (age >= 33 && age <= 39){
         agePoints = 25;
+      } else if (age >= 40 && age <= 44){
+        agePoints = 15;
+      } else if (age >= 45 && age <= 49) {
+        agePoints = 0;
       }
       var ssPoints = $scope.stateSponsorship ? 5 : 0;
       var sbPoints = $scope.spouseBonus ? 5 : 0;
