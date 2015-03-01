@@ -1,17 +1,19 @@
 <div class="row marketing">
     <div ng-controller="MainCtrl" class="control-group ng-scope">
-        <h1>来测测你有没有移民资格！</h1>
+        <h1>189移民签证算分器</h1>
         <span class="total-points">你的总评分为:<span class="badge">{{getPoints()}}</span></span>
-        <span class="help-block">EOI及格线为60分。</span>
+        <div>本算分器不包含打分表中的所有内容，省略的内容都是对90%的国内同学没有用的内容。EOI及格线为60分。</div>
         <ul>
             <li class="control-group">
-                <label class="control-label">年龄</label>
-                <span class="help-block">25~32周岁之间可以获得30分。</span>
-                <input ng-model="age">
+                <label for="age" class="control-label">年龄</label>
+                <span>25~32周岁之间可以获得30分。</span>
+                <div>
+                    <input id="age" ng-model="age">
+                </div>
             </li>
             <li class="control-group">
                 <label class="control-label">雅思成绩</label>
-                <span class="help-block">雅思成绩每项均不得低于6分。</span>
+                <span>雅思成绩每项均不得低于6分。</span>
 
                 <div class="clearfix radio-group" data-role="controlgroup">
                     <label class="radio inline"><input type="radio" value="0" ng-model="ieltsPoints" class="ng-pristine ng-valid" name="004">6</label>
@@ -21,13 +23,13 @@
             </li>
             <li class="control-group">
                 <label class="control-label">学历</label>
-                <span class="help-block">教育部承认的本科和硕士15分，博士20分。</span>
+                <span>教育部承认的本科和硕士15分，博士20分。</span>
                 <label class="radio inline"><input type="radio" value="15" ng-model="eduPoints" class="ng-pristine ng-valid" name="007">BS/MS</label>
                 <label class="radio inline"><input type="radio" value="20" ng-model="eduPoints" class="ng-pristine ng-valid" name="008">Phd</label>
             </li>
             <li class="control-group">
                 <label class="control-label">工作年限</label>
-                <span class="help-block">正式工作的年限，有很多成功案例将实习计算为工作年限。</span>
+                <span>正式工作的年限，有很多成功案例将实习计算为工作年限。</span>
 
                 <div class="clearfix radio-group" data-role="controlgroup">
                     <label class="radio inline">
@@ -40,14 +42,14 @@
             </li>
             <li class="control-group">
                 <label class="control-label">州担保</label>
-                <span class="help-block">不同州的担保条件是不同的，新南威尔士州目前雅思4x6即可担保软件工程师。</span>
+                <span>不同州的担保条件是不同的，新南威尔士州目前雅思4x6即可担保软件工程师。</span>
                 <label class="checkbox">
                     <input type="checkbox" ng-model="stateSponsorship" class="ng-pristine ng-valid"> 我符合州担保的条件。
                 </label>
             </li>
             <li class="control-group">
                 <label class="control-label">配偶加分</label>
-                <span class="help-block">配偶必须达到雅思6分，并且提名职业在SOL列表中，过去2年中有1年工作经历</span>
+                <span>配偶必须达到雅思6分，并且提名职业在SOL列表中，过去2年中有1年工作经历</span>
 
                 <label class="checkbox">
                     <input type="checkbox" ng-model="spouseBonus" class="ng-pristine ng-valid"> 配偶符合加分的要求。
