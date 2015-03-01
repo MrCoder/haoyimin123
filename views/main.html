@@ -1,23 +1,58 @@
-<div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
-</div>
-
 <div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
+    <div ng-controller="MainCtrl" class="control-group ng-scope">
+        <h1>来测测你有没有移民资格！</h1>
+        <span class="total-points">你的总评分为:<span class="badge">{{getPoints()}}</span></span>
+        <span class="help-block">EOI及格线为60分。</span>
+        <ul>
+            <li class="control-group">
+                <label class="control-label">年龄</label>
+                <span class="help-block">25~32周岁之间可以获得30分。</span>
+                <input ng-model="age">
+            </li>
+            <li class="control-group">
+                <label class="control-label">雅思成绩</label>
+                <span class="help-block">雅思成绩每项均不得低于6分。</span>
 
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
+                <div class="clearfix radio-group" data-role="controlgroup">
+                    <label class="radio inline"><input type="radio" value="0" ng-model="ieltsPoints" class="ng-pristine ng-valid" name="004">6</label>
+                    <label class="radio inline"><input type="radio" value="10" ng-model="ieltsPoints" class="ng-pristine ng-valid" name="005">7</label>
+                    <label class="radio inline"><input type="radio" value="20" ng-model="ieltsPoints" class="ng-pristine ng-valid" name="006">8</label>
+                </div>
+            </li>
+            <li class="control-group">
+                <label class="control-label">学历</label>
+                <span class="help-block">教育部承认的本科和硕士15分，博士20分。</span>
+                <label class="radio inline"><input type="radio" value="15" ng-model="eduPoints" class="ng-pristine ng-valid" name="007">BS/MS</label>
+                <label class="radio inline"><input type="radio" value="20" ng-model="eduPoints" class="ng-pristine ng-valid" name="008">Phd</label>
+            </li>
+            <li class="control-group">
+                <label class="control-label">工作年限</label>
+                <span class="help-block">正式工作的年限，有很多成功案例将实习计算为工作年限。</span>
 
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
+                <div class="clearfix radio-group" data-role="controlgroup">
+                    <label class="radio inline">
+                        <input type="radio" value="15" ng-model="empYearsPoints" class="ng-pristine ng-valid" name="009"> 8+
+                    </label>
+                    <label class="radio inline"><input type="radio" value="10" ng-model="empYearsPoints" class="ng-pristine ng-valid" name="00A"> 5+ </label>
+                    <label class="radio inline"><input type="radio" value="5" ng-model="empYearsPoints" class="ng-pristine ng-valid" name="00B"> 3+</label>
+                    <label class="radio inline"><input type="radio" value="0" ng-model="empYearsPoints" class="ng-pristine ng-valid" name="00C"> 3-</label>
+                </div>
+            </li>
+            <li class="control-group">
+                <label class="control-label">州担保</label>
+                <span class="help-block">不同州的担保条件是不同的，新南威尔士州目前雅思4x6即可担保软件工程师。</span>
+                <label class="checkbox">
+                    <input type="checkbox" ng-model="stateSponsorship" class="ng-pristine ng-valid"> 我符合州担保的条件。
+                </label>
+            </li>
+            <li class="control-group">
+                <label class="control-label">配偶加分</label>
+                <span class="help-block">配偶必须达到雅思6分，并且提名职业在SOL列表中，过去2年中有1年工作经历</span>
+
+                <label class="checkbox">
+                    <input type="checkbox" ng-model="spouseBonus" class="ng-pristine ng-valid"> 配偶符合加分的要求。
+                </label>
+            </li>
+        </ul>
+    </div>
 </div>
