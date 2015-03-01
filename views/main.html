@@ -1,12 +1,12 @@
 <div class="row marketing">
     <div ng-controller="MainCtrl" class="control-group ng-scope">
         <h1>189移民签证算分器</h1>
-        <span class="total-points">你的总评分为:<span class="badge">{{getPoints()}}</span></span>
+        <h2><span class="label label-primary">你的总评分为:<span class="badge">{{getPoints()}}</span></span></h2>
         <div>本算分器不包含打分表中的所有内容，省略的内容都是对90%的国内同学没有用的内容。EOI及格线为60分。</div>
         <ul>
             <li class="control-group">
                 <label for="age" class="control-label">年龄</label>
-                <span>25~32周岁之间可以获得30分。</span>
+                <span>最高分为25~32周岁(30分)。</span>
                 <div>
                     <input id="age" ng-model="age">
                 </div>
@@ -16,9 +16,9 @@
                 <span>雅思成绩每项均不得低于6分。</span>
 
                 <div class="clearfix radio-group" data-role="controlgroup">
-                    <label class="radio inline"><input type="radio" value="0" ng-model="ieltsPoints" class="ng-pristine ng-valid" name="004">6</label>
-                    <label class="radio inline"><input type="radio" value="10" ng-model="ieltsPoints" class="ng-pristine ng-valid" name="005">7</label>
-                    <label class="radio inline"><input type="radio" value="20" ng-model="ieltsPoints" class="ng-pristine ng-valid" name="006">8</label>
+                    <label class="radio inline"><input type="radio" value="0" ng-model="ieltsPoints">听说读写均达到6</label>
+                    <label class="radio inline"><input type="radio" value="10" ng-model="ieltsPoints">听说读写均达到7</label>
+                    <label class="radio inline"><input type="radio" value="20" ng-model="ieltsPoints">听说读写均达到8</label>
                 </div>
             </li>
             <li class="control-group">
