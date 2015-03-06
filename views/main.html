@@ -1,58 +1,187 @@
 <div class="row marketing">
-    <div ng-controller="MainCtrl" class="control-group ng-scope">
-        <h1>澳洲技术移民签证在线打分系统</h1>
-        <h2><span class="label label-primary">你的总评分为:<span class="badge">{{getPoints()}}</span></span></h2>
-        <div>本算分器不包含打分表中的所有内容，省略的内容都是对90%的国内同学没有用的内容。EOI及格线为60分。</div>
-        <ul>
-            <li class="control-group">
-                <label for="age" class="control-label">年龄</label>
-                <span>最高分为25~32周岁(30分)。</span>
-                <div>
-                    <input id="age" ng-model="age">
-                </div>
-            </li>
-            <li class="control-group">
-                <label class="control-label">雅思成绩</label>
-                <span>雅思成绩每项均不得低于6分。</span>
+<div ng-controller="MainCtrl" class="control-group ng-scope">
 
-                <div class="clearfix radio-group" data-role="controlgroup">
-                    <label class="radio inline"><input type="radio" value="0" ng-model="ieltsPoints">听说读写均达到6</label>
-                    <label class="radio inline"><input type="radio" value="10" ng-model="ieltsPoints">听说读写均达到7</label>
-                    <label class="radio inline"><input type="radio" value="20" ng-model="ieltsPoints">听说读写均达到8</label>
-                </div>
-            </li>
-            <li class="control-group">
-                <label class="control-label">学历</label>
-                <span>教育部承认的本科和硕士15分，博士20分。</span>
-                <label class="radio inline"><input type="radio" value="15" ng-model="eduPoints" class="ng-pristine ng-valid" name="007">BS/MS</label>
-                <label class="radio inline"><input type="radio" value="20" ng-model="eduPoints" class="ng-pristine ng-valid" name="008">Phd</label>
-            </li>
-            <li class="control-group">
-                <label class="control-label">工作年限</label>
-                <span>正式工作的年限，有很多成功案例将实习计算为工作年限。</span>
+<div id="contents" class="column" style="visibility: visible;">
+<div id="score">
+    <div class="pointsPanel"><h2><span>你的总评分为:</span> <strong>{{getPoints()}}</strong> <span>60(含)可以提交EOI申请</span>
+    </h2></div>
+</div>
+<div id="results">
+    <div class="resultsTable detailsTable">
+        <div class="left">
+            <div>
 
-                <div class="clearfix radio-group" data-role="controlgroup">
-                    <label class="radio inline"><input type="radio" value="15" ng-model="empYearsPoints"> 8+ </label>
-                    <label class="radio inline"><input type="radio" value="10" ng-model="empYearsPoints"> 5+ </label>
-                    <label class="radio inline"><input type="radio" value="5" ng-model="empYearsPoints"> 3+</label>
-                    <label class="radio inline"><input type="radio" value="0" ng-model="empYearsPoints"> 3-</label>
-                </div>
-            </li>
-            <li class="control-group">
-                <label class="control-label">州担保</label>
-                <span>不同州的担保条件是不同的，新南威尔士州目前雅思4x6即可担保软件工程师。</span>
-                <label class="checkbox">
-                    <input type="checkbox" ng-model="stateSponsorship" class="ng-pristine ng-valid"> 我符合州担保的条件。
-                </label>
-            </li>
-            <li class="control-group">
-                <label class="control-label">配偶加分</label>
-                <span>配偶必须达到雅思6分，并且提名职业在SOL列表中，过去2年中有1年工作经历</span>
 
-                <label class="checkbox">
-                    <input type="checkbox" ng-model="spouseBonus" class="ng-pristine ng-valid"> 配偶符合加分的要求。
-                </label>
-            </li>
-        </ul>
+                    <table cellspacing="0" id="table-microdata">
+                        <thead>
+                        <tr id="head-microdata">
+                            <th colspan="2">年龄
+                                <div>
+                                    <div class="grade"><span class="great">10</span></div>
+                                </div>
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr id="row-microdata-microdata">
+                            <th class="hasLink">
+                                <div><input ng-model="age"></div>
+                            </th>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table cellspacing="0" id="table-location">
+                        <thead>
+                        <tr id="head-location">
+                            <th colspan="2">雅思成绩
+                                <div>
+                                    <div class="grade"><span class="great">20</span></div>
+                                </div>
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr id="row-location-geolocation">
+                            <th class="hasLink">
+                                <label class="radio inline"><input type="radio" value="0" ng-model="ieltsPoints">听说读写均达到6</label>
+                                <label class="radio inline"><input type="radio" value="10" ng-model="ieltsPoints">听说读写均达到7</label>
+                                <label class="radio inline"><input type="radio" value="20" ng-model="ieltsPoints">听说读写均达到8</label>
+                            </th>
+                        </tr>
+                        </tbody>
+                    </table>
+
+
+
+                <table cellspacing="0" id="table-webrtc">
+                    <thead>
+                    <tr id="head-webrtc">
+                        <th colspan="2">学历
+                            <div>
+                                <div class="grade"><span class="good">15/20</span></div>
+                            </div>
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr id="row-webrtc-webrtc">
+                        <th class="hasLink">
+                            <label class="radio inline"><input type="radio" value="15" ng-model="eduPoints"
+                                                               class="ng-pristine ng-valid" name="007">BS/MS</label>
+                            <label class="radio inline"><input type="radio" value="20" ng-model="eduPoints"
+                                                               class="ng-pristine ng-valid" name="008">Phd</label>
+                        </th>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+        <div class="right">
+            <div>
+
+
+                <table cellspacing="0" id="table-webgl">
+                    <thead>
+                    <tr id="head-webgl">
+                        <th colspan="2">工作年限
+                            <div>
+                                <div class="grade"><span class="great">20</span></div>
+                            </div>
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr id="row-webgl-context">
+                        <th class="hasLink">
+                            <label class="radio inline"><input type="radio" value="15" ng-model="empYearsPoints"> 8+ </label>
+                            <label class="radio inline"><input type="radio" value="10" ng-model="empYearsPoints"> 5+ </label>
+                            <label class="radio inline"><input type="radio" value="5" ng-model="empYearsPoints"> 3+</label>
+                            <label class="radio inline"><input type="radio" value="0" ng-model="empYearsPoints"> 3-</label>
+                        </th>
+                    </tr>
+                    </tbody>
+                </table>
+                <table cellspacing="0" id="table-animation">
+                    <thead>
+                    <tr id="head-animation">
+                        <th colspan="2">其他加分
+                            <div>
+                                <div class="grade"><span class="great">5</span></div>
+                            </div>
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr id="row-animation-requestAnimationFrame">
+                        <th class="hasLink">
+                            <input type="checkbox" ng-model="spouseBonus" class="ng-pristine ng-valid"> 配偶符合加分的要求。
+                            <input type="checkbox" ng-model="stateSponsorship" class="ng-pristine ng-valid"> 我符合州担保的条件。
+                        </th>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
     </div>
+</div>
+
+<div class="paper">
+    <div>
+        <h2>关于澳洲技术移民签证在线打分系统</h2>
+
+        <div class="text">
+            <span id="html5"></span>
+
+            <p data-i18n="index-intro-1">本算分器不包含打分表中的所有内容，省略的内容都是对90%的国内同学没有用的内容。EOI及格线为60分。</p>
+
+            <p data-i18n="index-intro-2">
+                The HTML5 test does not try to test all of the new features offered by HTML5, nor does it
+                try to test the functionality of each feature it does detect.
+                Despite these shortcomings we hope that by quantifying the level of support users and web
+                developers will get an idea of how hard the
+                browser manufacturers work on improving their browsers and the web as a development
+                platform.
+            </p>
+
+            <p data-i18n="index-intro-3">
+                The score is calculated by testing for the many new features of HTML5. Each feature is worth
+                one or more points. Apart from the main HTML5
+                specification and other specifications created the W3C HTML Working Group or WHATWG, this
+                test also awards points for supporting related drafts and
+                specifications.
+            </p>
+
+            <p data-i18n="index-intro-5">
+                Please be aware that although the HTML5 specification is now an official recommendation,
+                other specifications that are being tested are still in development
+                and could change before receiving an official status.
+                In the future new tests will be added for new specifications and existing tests will be
+                updated when the specifications change.
+            </p>
+
+            <h3>Help us improve HTML5 test by donating</h3>
+
+            <p>
+                This will allow us to spend more time on HTML5test.com and acquire more devices for our
+                testing lab.
+
+            </p>
+        </div>
+    </div>
+
+    <div class="buttons">
+        <a class="button donate"
+           href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=9DNBJPQFEHYSC"><span>Donate using Paypal</span></a>
+        <a class="button followme" href="http://www.twitter.com/html5test"><span>Follow me on Twitter</span></a>
+        <a class="button contact" href="mailto:info@html5test.com"><span>Contact me</span></a>
+        <a class="button developed"
+           href="https://github.com/NielsLeenheer/html5test"><span>Developed at Github</span></a>
+    </div>
+</div>
+
+</div>
+
+</div>
 </div>
