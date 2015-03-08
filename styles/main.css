@@ -720,15 +720,6 @@ body.indexVisible > div#index button#indexbutton {
     border-top: 8px solid #d9d9d9
 }
 
-.paper > div .text {
-    -moz-column-count: 3;
-    -moz-column-gap: 16px;
-    -webkit-column-count: 3;
-    -webkit-column-gap: 16px;
-    column-count: 3;
-    column-gap: 16px
-}
-
 .paper > div .text.no-columns {
     -webkit-column-count: 1 !important;
     -moz-column-count: 1 !important;
@@ -1700,7 +1691,6 @@ body.indexVisible > div#index button#indexbutton {
     height: 44px;
     font-family: 'League Gothic', Impact;
     font-weight: 400;
-    font-size: 2em;
     text-align: left
 }
 
