@@ -37,6 +37,25 @@ body {
     border-top: 1px solid #e5e5e5;
 }
 
+.step p {
+    font-size: 0.9em;
+}
+
+.col-md-3.step {
+    padding: 0 8px;
+}
+
+.card {
+    background: #FFF;
+    border: 1px solid #AAA;
+    border-bottom: 3px solid #BBB;
+    padding: 5px;
+    overflow: hidden;
+    min-height: 286px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
 .container-narrow > hr {
     margin: 30px 0;
 }
