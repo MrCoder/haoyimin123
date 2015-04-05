@@ -7,11 +7,12 @@
 
 body {
     padding: 0;
+    background-image: url("../oz-58k.JPG");
+    background-repeat: no-repeat;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
-.marketing,
 .footer {
     padding-left: 15px;
     padding-right: 15px;
@@ -22,6 +23,10 @@ body {
     margin-bottom: 10px;
 }
 
+h2 {
+    text-align: center;
+}
+
 /* Make the masthead heading the same height as the navigation */
 .header h3 {
     margin-top: 0;
@@ -29,6 +34,7 @@ body {
     line-height: 40px;
     padding-bottom: 19px;
 }
+
 
 /* Custom page footer */
 .footer {
@@ -59,6 +65,11 @@ body {
 .container-narrow > hr {
     margin: 30px 0;
 }
+button.btn-primary,
+label.btn-primary {
+    background-color: #31B0D5;
+    border-color: white;
+}
 
 /* Main marketing message and sign up button */
 .jumbotron {
@@ -71,14 +82,6 @@ body {
     padding: 14px 24px;
 }
 
-/* Supporting marketing content */
-.marketing {
-    margin: 40px 0;
-}
-
-.marketing p + h4 {
-    margin-top: 28px;
-}
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
@@ -88,7 +91,6 @@ body {
 
     /* Remove the padding we set earlier */
     .header,
-    .marketing,
     .footer {
         padding-left: 0;
         padding-right: 0;
@@ -143,17 +145,13 @@ html {
     overflow-x: hidden
 }
 
-body {
-    background: #ededed
-}
-
 h2 {
     font-family: 'League Gothic', Impact;
     font-weight: 400;
-    font-size: 3.8em;
+    font-size: 2em;
     line-height: 100%;
     text-transform: uppercase;
-    color: #0092bf
+    color: #fff
 }
 
 h3 {
@@ -188,10 +186,6 @@ table {
     width: 100%
 }
 
-tbody tr:hover > td, tbody tr:hover > th {
-    background-color: #f6f6f6
-}
-
 body > div#contentwrapper {
     -webkit-transition: -webkit-transform .4s, -webkit-filter 1.2s, opacity 1.2s;
     transition: transform .4s, filter 1.2s, opacity 1.2s;
@@ -217,7 +211,7 @@ body.indexVisible > div#contentwrapper {
     font-weight: 700;
     text-align: left;
     text-transform: uppercase;
-    color: #666;
+    color: #fff;
     padding: 8px 40px;
     margin: 0 auto;
     max-width: 900px
@@ -250,50 +244,6 @@ body.indexVisible > div#contentwrapper {
     color: #bbb
 }
 
-.header div {
-    margin: 10px auto 0;
-    overflow: hidden;
-    max-width: 900px;
-    padding: 0 40px
-}
-
-.header ul {
-    list-style-type: none;
-    margin-bottom: 8px
-}
-
-.header ul.left {
-    float: left
-}
-
-.header ul.right {
-    float: right
-}
-
-.header ul li {
-    display: block;
-    float: left;
-    margin: 0 3px 0 0;
-    padding: 0 10px;
-    line-height: 32px;
-    color: #fff;
-    font-size: .9em;
-    text-transform: lowercase;
-    background: #aaa
-}
-
-.header ul li.selected {
-    background: #0092bf
-}
-
-.header ul li:hover {
-    box-shadow: inset 0 32px 0 rgba(0, 0, 0, .05)
-}
-
-.header ul li a {
-    color: #fff;
-    text-decoration: none
-}
 
 @media (max-width: 680px) {
     .header h1 {
@@ -787,17 +737,8 @@ body.indexVisible > div#index button#indexbutton {
     text-decoration: none
 }
 
-.paper > div .text a:hover {
-    color: #0092bf;
-    text-decoration: underline
-}
-
 .paper > div .text a.button {
     color: inherit
-}
-
-.paper > div .text a.button:hover {
-    text-decoration: inherit
 }
 
 .intro {
@@ -1066,10 +1007,6 @@ body.indexVisible > div#index button#indexbutton {
     font-size: 1em;
     text-decoration: none;
     text-align: left
-}
-
-.button:hover {
-    box-shadow: inset 0 50px 0 rgba(0, 0, 0, .05)
 }
 
 .button > span {
@@ -1445,10 +1382,6 @@ body.indexVisible > div#index button#indexbutton {
     text-decoration: none
 }
 
-.popupPanel.save a:hover {
-    text-decoration: underline
-}
-
 .popupPanel.save p {
     margin-bottom: 1em
 }
@@ -1560,13 +1493,6 @@ body.indexVisible > div#index button#indexbutton {
     transition: all .3s ease-in-out
 }
 
-.useragent > span a.correct:hover {
-    color: #1c8c1d
-}
-
-.useragent > span a.wrong:hover {
-    color: #853333
-}
 
 @media (max-width: 680px) {
     .useragent {
@@ -1700,10 +1626,6 @@ body.indexVisible > div#index button#indexbutton {
     background: #0092bf
 }
 
-.resultsTable table thead tr > * {
-    border-bottom: 8px solid #d9d9d9
-}
-
 .resultsTable table thead th {
     position: relative;
     padding: 0 10px;
@@ -1757,14 +1679,13 @@ body.indexVisible > div#index button#indexbutton {
 
 .resultsTable table tbody th {
     padding: 5px 10px;
-    font-size: .75em;
     font-weight: 400;
     text-align: left;
     position: relative
 }
 
 .resultsTable table tbody td {
-    padding: 5px 10px;
+    padding: 5px 5px;
     font-size: .75em;
     text-align: right;
     white-space: nowrap
@@ -1800,13 +1721,6 @@ body.indexVisible > div#index button#indexbutton {
     padding-left: 28px
 }
 
-.resultsTable table tr th.hasLink:hover {
-    cursor: pointer
-}
-
-.resultsTable table tr th.hasLink:hover span {
-    text-decoration: underline
-}
 
 .resultsTable table tr.hasChild th > * {
     position: relative
@@ -1871,10 +1785,6 @@ body.indexVisible > div#index button#indexbutton {
     text-decoration: none
 }
 
-.resultsTable a:hover {
-    text-decoration: underline
-}
-
 .resultsTable .linksPanel {
     max-width: 120%;
     min-width: 291px;
@@ -1927,10 +1837,6 @@ body.indexVisible > div#index button#indexbutton {
     display: block;
     width: 100%;
     height: 66px
-}
-
-.resultsTable .linksPanel .info .column a:hover {
-    background: #eee
 }
 
 .resultsTable .linksPanel .info .column span {
@@ -2053,11 +1959,6 @@ body.indexVisible > div#index button#indexbutton {
     background-repeat: no-repeat;
     overflow: hidden;
     text-overflow: ellipsis
-}
-
-.resultsTable .linksPanel .links a:hover {
-    background-color: #eee;
-    text-decoration: none
 }
 
 .resultsTable .linksPanel .links a.w3c {

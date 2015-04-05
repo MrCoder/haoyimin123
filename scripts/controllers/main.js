@@ -22,22 +22,29 @@ angular.module('haoyiminApp')
     $scope.stateSponsorshipPoints = 0;
     $scope.spouseBonusPoints = 0;
 
+    function _calculateAge(birthday) { // birthday is a date
+      var ageDifMs = Date.now() - birthday.getTime();
+      var ageDate = new Date(ageDifMs); // miliseconds from epoch
+      return Math.abs(ageDate.getUTCFullYear() - 1970);
+    }
 
     $scope.getPoints = function(){
       $scope.total="{color:red}";
-//      var age = $scope.age;
-//      var agePoints = 0;
-//      if(age >= 18 && age <= 24) {
-//        agePoints = 25;
-//      } else if (age >= 25 && age <= 32){
-//        agePoints = 30;
-//      } else if (age >= 33 && age <= 39){
-//        agePoints = 25;
-//      } else if (age >= 40 && age <= 44){
-//        agePoints = 15;
-//      } else if (age >= 45 && age <= 49) {
-//        agePoints = 0;
-//      }
+
+      var age = _calculateAge($scope.birthday);
+      var agePoints = 0;
+      if(age >= 18 && age <= 24) {
+        agePoints = 25;
+      } else if (age >= 25 && age <= 32){
+        agePoints = 30;
+      } else if (age >= 33 && age <= 39){
+        agePoints = 25;
+      } else if (age >= 40 && age <= 44){
+        agePoints = 15;
+      } else if (age >= 45 && age <= 49) {
+        agePoints = 0;
+      }
+      $scope.agePoints = agePoints;
       var points = parseInt($scope.agePoints, 10)
         + parseInt($scope.ieltsPoints, 10)
         + parseInt($scope.eduPoints, 10)

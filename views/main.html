@@ -1,110 +1,102 @@
-<div class="row marketing">
 <div class="row">
     <h2>澳洲技术移民签证申请步骤</h2>
+
     <div class="col-md-3 step">
         <div class="card">
             <h3 class="text-center">(1)雅思与职业评估</h3>
+
             <p>雅思和职业评估是独立技术移民和州担保技术移民的先决条件。雅思的成绩应该听说读写每项均达到6分或以上。职业评估要求你评估
-            出来的职业必须在移民部当前的移民职业清单（SOL）上。如果与配偶一起申请，配偶的职业也应该在同一个移民职业清单上。</p>
+                出来的职业必须在移民部当前的移民职业清单（SOL）上。如果与配偶一起申请，配偶的职业也应该在同一个移民职业清单上。</p>
         </div>
     </div>
     <div class="col-md-3 step">
         <div class="card">
             <h3 class="text-center">(2)EOI申请</h3>
+
             <p>EOI(Expression of Interest)的内容包括申请人得年龄、学历、工作经验（职业评估的结果）和英语程度（雅思考试的成绩）等信息，系统将根据
-            这些信息为申请人自动打分。然后在SkillSelect系统里面按照分数和EOI提交时间这两个因素来排队。在每轮选取时（目前
-            每月选取两次）有系统从高到低选取，直到达到每轮计划选取的数量。</p>
+                这些信息为申请人自动打分。然后在SkillSelect系统里面按照分数和EOI提交时间这两个因素来排队。在每轮选取时（目前
+                每月选取两次）有系统从高到低选取，直到达到每轮计划选取的数量。</p>
         </div>
     </div>
     <div class="col-md-3 step">
         <div class="card">
             <h3 class="text-center">(3)递交申请</h3>
+
             <p>收到EOI的邀请之后，在有效期内可以提交签证申请。签证官根据之前提交的信息审理签证申请。在审理过程中，签证官可能会要求补充材料
-            或者向相关人、公司和组织查证提交的信息。如果收到签证官要求做体检和无刑事犯罪证明的通知，说明其他的都已经审理通过了。</p>
+                或者向相关人、公司和组织查证提交的信息。如果收到签证官要求做体检和无刑事犯罪证明的通知，说明其他的都已经审理通过了。</p>
         </div>
     </div>
     <div class="col-md-3 step">
         <div class="card">
             <h3 class="text-center">(4)拿到签证</h3>
+
             <p>收到签证之后，其实万里长征才刚刚开始。等待你的固然是五彩缤纷的新生活，但是别忘了计划好登陆、托运、资金转移、工作等等后续的安排。</p>
         </div>
     </div>
 </div>
 <div ng-controller="MainCtrl">
 
-<div id="contents" class="column" style="visibility: visible;">
-<div id="score">
-    <div class="pointsPanel"><h2><span>你的总评分为:</span> <strong>{{getPoints()}}</strong> <span>60(含)可以提交EOI申请</span>
-    </h2></div>
-</div>
-<div id="results">
-    <div class="resultsTable detailsTable">
-        <div class="left">
-            <div>
-
-
-                    <table cellspacing="0" id="table-microdata">
-                        <thead>
-                        <tr id="head-microdata">
-                            <th colspan="2">年龄
-                                <div>
-                                    <div class="grade"><span class="great">{{agePoints}}</span></div>
-                                </div>
-                            </th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr id="row-microdata-microdata">
-                            <th class="hasLink">
-                                <div class="btn-group">
-                                    <label class="btn btn-primary" ng-model="agePoints" btn-radio="'30'">25到32岁</label>
-                                    <label class="btn btn-primary" ng-model="agePoints" btn-radio="'25'">18到24岁或33到39岁</label>
-                                    <label class="btn btn-primary" ng-model="agePoints" btn-radio="'15'">40到44岁</label>
-                                    <label class="btn btn-primary" ng-model="agePoints" btn-radio="'0'">45到49岁</label>
-                                </div>
-                            </th>
-                        </tr>
-                        </tbody>
-                    </table>
-                    <table cellspacing="0" id="table-location">
-                        <thead>
-                        <tr id="head-location">
-                            <th colspan="2">雅思成绩
-                                <div>
-                                    <div class="grade"><span class="great">{{ieltsPoints}}</span></div>
-                                </div>
-                            </th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr id="row-location-geolocation">
-                            <th class="hasLink">
-                                听说读写四项最低分：
-                                <div class="btn-group">
-                                    <label class="btn btn-primary" ng-model="ieltsPoints" btn-radio="'0'">6</label>
-                                    <label class="btn btn-primary" ng-model="ieltsPoints" btn-radio="'10'">7</label>
-                                    <label class="btn btn-primary" ng-model="ieltsPoints" btn-radio="'20'">8</label>
-                                </div>
-                            </th>
-                        </tr>
-                        </tbody>
-                    </table>
-
-
+    <div id="contents" class="column" style="visibility: visible;">
+        <div id="score">
+            <div class="pointsPanel"><h2><span>你的EOI分数为:</span> <strong>{{getPoints()}}</strong>
+                <span>(60分可以提交EOI申请)</span>
+            </h2></div>
+        </div>
+        <div class="results row resultsTable detailsTable">
+            <div class="col-md-6">
+                <table cellspacing="0" id="table-microdata">
+                    <thead>
+                    <tr id="head-microdata">
+                        <th colspan="2">生日
+                            <span class="pull-right">{{agePoints}}</span>
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr id="row-microdata-microdata">
+                        <th>
+                            <datepicker ng-model="birthday" init-date="01/01/1980" show-weeks="false"
+                                        min-date="minDate" show-weeks="true"
+                                        class="well well-sm"></datepicker>
+                        </th>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-6">
+                <table cellspacing="0" id="table-location">
+                    <thead>
+                    <tr id="head-location">
+                        <th colspan="2">雅思成绩
+                            <span class="pull-right">{{ieltsPoints}}</span>
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr id="row-location-geolocation">
+                        <th>
+                            听说读写四项最低分：
+                            <div class="btn-group">
+                                <label class="btn btn-primary" ng-model="ieltsPoints" btn-radio="'0'">6</label>
+                                <label class="btn btn-primary" ng-model="ieltsPoints" btn-radio="'10'">7</label>
+                                <label class="btn btn-primary" ng-model="ieltsPoints" btn-radio="'20'">8</label>
+                            </div>
+                        </th>
+                    </tr>
+                    </tbody>
+                </table>
 
                 <table cellspacing="0" id="table-webrtc">
                     <thead>
                     <tr id="head-webrtc">
                         <th colspan="2">学历
-                            <div>
-                                <div class="grade"><span class="good">{{eduPoints}}</span></div>
-                            </div>
+                            <span class="pull-right">{{eduPoints}}</span>
                         </th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr id="row-webrtc-webrtc">
-                        <th class="hasLink">
+                        <th>
                             <div class="btn-group">
                                 <label class="btn btn-primary" ng-model="eduPoints" btn-radio="'15'">学士或硕士</label>
                                 <label class="btn btn-primary" ng-model="eduPoints" btn-radio="'20'">博士</label>
@@ -114,30 +106,26 @@
                     </tbody>
                 </table>
 
-            </div>
-        </div>
-        <div class="right">
-            <div>
-
-
                 <table cellspacing="0" id="table-webgl">
                     <thead>
                     <tr id="head-webgl">
                         <th colspan="2">工作年限
-                            <div>
-                                <div class="grade"><span class="great">{{empYearsPoints}}</span></div>
-                            </div>
+                            <span class="pull-right">{{empYearsPoints}}</span>
                         </th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr id="row-webgl-context">
-                        <th class="hasLink">
+                        <th>
                             <div class="btn-group">
-                                <label class="btn btn-primary" ng-model="empYearsPoints" btn-radio="'15'">8年或以上</label>
-                                <label class="btn btn-primary" ng-model="empYearsPoints" btn-radio="'10'">5年或以上</label>
-                                <label class="btn btn-primary" ng-model="empYearsPoints" btn-radio="'5'">3年或以上</label>
-                                <label class="btn btn-primary" ng-model="empYearsPoints" btn-radio="'0'">3年以下</label>
+                                <label class="btn btn-primary" ng-model="empYearsPoints"
+                                       btn-radio="'15'">8年或以上</label>
+                                <label class="btn btn-primary" ng-model="empYearsPoints"
+                                       btn-radio="'10'">5年或以上</label>
+                                <label class="btn btn-primary" ng-model="empYearsPoints"
+                                       btn-radio="'5'">3年或以上</label>
+                                <label class="btn btn-primary" ng-model="empYearsPoints"
+                                       btn-radio="'0'">3年以下</label>
                             </div>
 
                         </th>
@@ -148,42 +136,28 @@
                     <thead>
                     <tr id="head-animation">
                         <th colspan="2">其他加分
-                            <div>
-                                <div class="grade"><span class="great">{{spouseBonusPoints + stateSponsorshipPoints}}</span></div>
-                            </div>
+                            <span class="pull-right">{{spouseBonusPoints + stateSponsorshipPoints}}</span>
                         </th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr id="row-animation-requestAnimationFrame">
-                        <th class="hasLink">
-                            <button type="button" class="btn btn-primary" ng-model="spouseBonusPoints" btn-checkbox btn-checkbox-true="5" btn-checkbox-false="0">
+                        <th>
+                            <button type="button" class="btn btn-primary" ng-model="spouseBonusPoints" btn-checkbox
+                                    btn-checkbox-true="5" btn-checkbox-false="0">
                                 配偶符合加分的要求。
                             </button>
-                            <button type="button" class="btn btn-primary" ng-model="stateSponsorshipPoints" btn-checkbox btn-checkbox-true="5" btn-checkbox-false="0">
+                            <button type="button" class="btn btn-primary" ng-model="stateSponsorshipPoints"
+                                    btn-checkbox btn-checkbox-true="5" btn-checkbox-false="0">
                                 我符合州担保的条件。
                             </button>
                         </th>
                     </tr>
                     </tbody>
                 </table>
-
             </div>
         </div>
     </div>
 </div>
 
-<div class="paper">
-    <div>
-
-        <div class="text">
-            <span>本算分器不包含打分表中的所有内容，省略的内容都是对90%的国内同学没有用的内容。EOI及格线为60分。</span>
-        </div>
-    </div>
-
-</div>
-
-</div>
-
-</div>
-</div>
+<p>本算分器不包含打分表中的所有内容，省略的内容都是对90%的国内同学没有用的内容。EOI及格线为60分。</p>
