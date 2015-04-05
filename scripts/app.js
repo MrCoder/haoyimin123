@@ -16,7 +16,6 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'angular-datepicker',
     'ui.bootstrap'
   ])
   .config(function ($routeProvider) {
