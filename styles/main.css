@@ -115,22 +115,6 @@ label.btn-primary {
 }
 
 /*HTML5 test*/
-@font-face {
-    font-family: html5test;
-    src: url(/fonts/html5test.eot);
-    src: url(/fonts/html5test.eot?#iefix) format('embedded-opentype'), url(/fonts/html5test.woff) format('woff'), url(/fonts/html5test.ttf) format('truetype'), url(/fonts/html5test.svg#html5test) format('svg');
-    font-weight: 400;
-    font-style: normal
-}
-
-@font-face {
-    font-family: 'League Gothic';
-    src: url(/fonts/leaguegothic-regular-webfont.eot);
-    src: url(/fonts/leaguegothic-regular-webfont.eot?#iefix) format('embedded-opentype'), url(/fonts/leaguegothic-regular-webfont.woff) format('woff'), url(/fonts/leaguegothic-regular-webfont.ttf) format('truetype'), url(/fonts/leaguegothic-regular-webfont.svg#league_gothicregular) format('svg');
-    font-weight: 400;
-    font-style: normal
-}
-
 * {
     padding: 0;
     margin: 0;

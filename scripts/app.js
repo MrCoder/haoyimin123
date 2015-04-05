@@ -10,7 +10,6 @@
  */
 angular
   .module('haoyiminApp', [
-    'ngAnimate',
     'ngCookies',
     'ngResource',
     'ngRoute',
